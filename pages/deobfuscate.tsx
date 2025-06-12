@@ -22,7 +22,7 @@ export default function DeobfuscatePage() {
   return (
     <Layout>
       <h1 className="text-4xl font-bold mb-4">أداة فك التشفير</h1>
-      <Editor code={code} setCode={setCode} />
+      <Editor />
       <Button onClick={handleSubmit} className="mt-4">فك التشفير</Button>
       {output && <pre className="whitespace-pre-wrap mt-4">{output}</pre>}
     </Layout>

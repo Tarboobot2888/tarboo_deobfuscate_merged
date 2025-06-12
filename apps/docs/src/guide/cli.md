@@ -5,21 +5,21 @@ Install the package globally:
 ::: code-group
 
 ```bash [npm]
-npm install -g webcrack
+npm install -g TARBOO DEOBFUSCATE JS
 ```
 
 ```bash [yarn]
-yarn global add webcrack
+yarn global add TARBOO DEOBFUSCATE JS
 ```
 
 ```bash [pnpm]
-pnpm add -g webcrack --allow-build=isolated-vm
+pnpm add -g TARBOO DEOBFUSCATE JS --allow-build=isolated-vm
 ```
 
 :::
 
 ```txt
-Usage: webcrack [options] [file]
+Usage: TARBOO DEOBFUSCATE JS [options] [file]
 
 Arguments:
   file                 input file, defaults to stdin
@@ -39,16 +39,16 @@ Options:
 The code can be passed as a file or via stdin:
 
 ```bash
-webcrack input.js
+TARBOO DEOBFUSCATE JS input.js
 # or download/pipe a script from a website
-curl https://pastebin.com/raw/ye3usFvH | webcrack
+curl https://pastebin.com/raw/ye3usFvH | TARBOO DEOBFUSCATE JS
 ```
 
 By default it outputs debug logs and the deobfuscated/unminified code to the terminal.
 To write the code to a file, you can do:
 
 ```bash
-webcrack input.js > output.js
+TARBOO DEOBFUSCATE JS input.js > output.js
 ```
 
 ## Unpack Bundles
@@ -56,7 +56,7 @@ webcrack input.js > output.js
 Use the `-o` option to unpack a bundle into a directory:
 
 ```bash
-webcrack bundle.js -o output
+TARBOO DEOBFUSCATE JS bundle.js -o output
 ```
 
 The output directory will contain the following files:
@@ -68,7 +68,7 @@ The output directory will contain the following files:
 
 ## Invoke from other programming languages
 
-If the package is installed locally instead of globally, the path of the CLI would look like `node_modules/.bin/webcrack`.
+If the package is installed locally instead of globally, the path of the CLI would look like `node_modules/.bin/TARBOO DEOBFUSCATE JS`.
 
 Spawn a new process where the code is piped to stdin.
 The logs will be written to stderr and the output code will be written to stdout.
@@ -80,7 +80,7 @@ import subprocess
 
 code = "1+1"
 result = subprocess.run(
-    ["webcrack"], input=code, capture_output=True, text=True
+    ["TARBOO DEOBFUSCATE JS"], input=code, capture_output=True, text=True
 )
 print(result.stdout)
 ```

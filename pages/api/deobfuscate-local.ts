@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { deobfuscateLocal } from '../../lib/webcrack-wrapper';
+import { runDeobfuscateLocal } from '../../lib/tarboo-wrapper';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const decoded = await deobfuscateLocal(code);
+    const decoded = await runDeobfuscateLocal(code);
     res.status(200).json({ decoded });
   } catch (error) {
     res.status(500).json({ error: 'Error during deobfuscation' });
