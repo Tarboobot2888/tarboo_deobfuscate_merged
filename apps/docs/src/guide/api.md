@@ -5,15 +5,15 @@ Installation:
 ::: code-group
 
 ```bash [npm]
-npm install webcrack
+npm install TARBOO DEOBFUSCATE JS
 ```
 
 ```bash [yarn]
-yarn add webcrack
+yarn add TARBOO DEOBFUSCATE JS
 ```
 
 ```bash [pnpm]
-pnpm add webcrack --allow-build=isolated-vm
+pnpm add TARBOO DEOBFUSCATE JS --allow-build=isolated-vm
 ```
 
 ## Basic Usage
@@ -25,9 +25,9 @@ All examples are shown with ESM syntax.
 For CommonJS, use the following instead:
 
 ```js
-const { webcrack } = require('webcrack');
+const { TARBOO DEOBFUSCATE JS } = require('TARBOO DEOBFUSCATE JS');
 
-webcrack('const a = 1+1;').then((result) => {
+TARBOO DEOBFUSCATE JS('const a = 1+1;').then((result) => {
   console.log(result.code); // 'const a = 2;'
 });
 ```
@@ -35,9 +35,9 @@ webcrack('const a = 1+1;').then((result) => {
 :::
 
 ```js
-import { webcrack } from 'webcrack';
+import { TARBOO DEOBFUSCATE JS } from 'TARBOO DEOBFUSCATE JS';
 
-const result = await webcrack('const a = 1+1;');
+const result = await TARBOO DEOBFUSCATE JS('const a = 1+1;');
 console.log(result.code); // 'const a = 2;'
 ```
 
@@ -45,17 +45,17 @@ Save the deobfuscated code and the unpacked bundle to the given directory:
 
 ```js
 import fs from 'fs';
-import { webcrack } from 'webcrack';
+import { TARBOO DEOBFUSCATE JS } from 'TARBOO DEOBFUSCATE JS';
 
 const code = fs.readFileSync('bundle.js', 'utf8');
-const result = await webcrack(code);
+const result = await TARBOO DEOBFUSCATE JS(code);
 await result.save('output-dir');
 ```
 
 ## Get Bundle Info
 
 ```js
-const { bundle } = await webcrack(code);
+const { bundle } = await TARBOO DEOBFUSCATE JS(code);
 bundle.type; // 'webpack' or 'browserify'
 bundle.entryId; // '0'
 bundle.modules; // Map(10) { '0' => Module { id: '0', ... }, 1 => ... }
@@ -71,7 +71,7 @@ entry.code; // 'const a = require("./1.js");'
 The default options are:
 
 ```js
-await webcrack(code, {
+await TARBOO DEOBFUSCATE JS(code, {
   jsx: true, // Decompile react components to JSX
   unpack: true, // Extract modules from the bundle
   unminify: true, // Unminify the code
@@ -85,7 +85,7 @@ await webcrack(code, {
 Only mangle variable names that match a filter:
 
 ```js
-await webcrack(code, {
+await TARBOO DEOBFUSCATE JS(code, {
   mangle: (id) => id.startsWith('_0x'),
 });
 ```
@@ -106,7 +106,7 @@ Simplest possible implementation, avoid using due to potentially executing malic
 :::
 
 ```js
-const result = await webcrack('function _0x317a(){....', { sandbox: eval });
+const result = await TARBOO DEOBFUSCATE JS('function _0x317a(){....', { sandbox: eval });
 ```
 
 More secure version with [sandybox](https://github.com/trentmwillis/sandybox) and CSP:
@@ -128,7 +128,7 @@ async function evalCode(code) {
   ]).finally(() => sandbox.removeFunction(fn));
 }
 
-const result = await webcrack('function _0x317a(){....', { sandbox: evalCode });
+const result = await TARBOO DEOBFUSCATE JS('function _0x317a(){....', { sandbox: evalCode });
 ```
 
 ## Customize Paths
@@ -143,7 +143,7 @@ If a matching node in the AST of a module is found, it will be renamed to the gi
 - Otherwise, the path is treated as a node module.
 
 ```js
-const result = await webcrack(code, {
+const result = await TARBOO DEOBFUSCATE JS(code, {
   mappings: (m) => ({
     './utils/color.js': m.regExpLiteral('^#([0-9a-f]{3}){1,2}$'),
     'lodash/index.js': m.memberExpression(
@@ -183,7 +183,7 @@ Webcrack's processing pipeline consists of six key stages:
 5. **[JSX](../concepts/jsx.md)** and **[Unpack](../concepts/unpack.md)**
 6. **Generate**: Converts the modified AST back into executable code.
 
-You can extend or modify webcrack's behavior by hooking into its pipeline stages using plugins. Plugins allow you to manipulate the AST at specific stages of the pipeline.
+You can extend or modify TARBOO DEOBFUSCATE JS's behavior by hooking into its pipeline stages using plugins. Plugins allow you to manipulate the AST at specific stages of the pipeline.
 
 ### Supported Stages
 
@@ -212,7 +212,7 @@ Webcrack's plugin API is similar to Babel's but only the following utility libra
 ### Example Plugin
 
 ```js
-import { webcrack } from 'webcrack';
+import { TARBOO DEOBFUSCATE JS } from 'TARBOO DEOBFUSCATE JS';
 
 function myPlugin({ types: t }) {
   return {
@@ -231,7 +231,7 @@ function myPlugin({ types: t }) {
   };
 }
 
-const result = await webcrack('1 + 1', {
+const result = await TARBOO DEOBFUSCATE JS('1 + 1', {
   plugins: {
     afterParse: [myPlugin],
   },
@@ -245,9 +245,9 @@ It should be compatible with most Babel plugins as long as they only access the 
 
 ```js
 import removeConsole from 'babel-plugin-transform-remove-console';
-import { webcrack } from 'webcrack';
+import { TARBOO DEOBFUSCATE JS } from 'TARBOO DEOBFUSCATE JS';
 
-const result = await webcrack('consol.log(a), b()', {
+const result = await TARBOO DEOBFUSCATE JS('consol.log(a), b()', {
   plugins: {
     afterUnminify: [removeConsole],
   },

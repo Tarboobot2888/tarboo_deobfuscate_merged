@@ -1,6 +1,6 @@
 # Introduction
 
-webcrack is a tool for reverse engineering javascript.
+TARBOO DEOBFUSCATE JS is a tool for reverse engineering javascript.
 It can deobfuscate [obfuscator.io](https://github.com/javascript-obfuscator/javascript-obfuscator), unminify,
 transpile, and unpack [webpack](https://webpack.js.org/)/[browserify](https://browserify.org/),
 to resemble the original source code as much as possible.
