@@ -97,7 +97,7 @@ interface WebpackRequire {
 Each module has a numerical id and contains a list of dependencies: `{ './foo': 1, './bar': 3 }`.
 These paths are relative to the current module and are used like `require('./foo')`.
 
-The absolute path a module is not stored anywhere, so webcrack builds a dependency tree
+The absolute path a module is not stored anywhere, so TARBOO DEOBFUSCATE JS builds a dependency tree
 and resolves the paths to preserve the original file structure as much as possible.
 
 ::: details Example

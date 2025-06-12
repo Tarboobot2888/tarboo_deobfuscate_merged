@@ -1,6 +1,6 @@
 # Deobfuscation
 
-webcrack can deobfuscate code obfuscated with [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator) ([obfuscator.io](https://obfuscator.io))
+TARBOO DEOBFUSCATE JS can deobfuscate code obfuscated with [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator) ([obfuscator.io](https://obfuscator.io))
 
 - String Array
   - Rotate

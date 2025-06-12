@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { deobfuscateLocal } from '../../lib/webcrack-wrapper';
+import { deobfuscateLocal } from '../../lib/tarboo-wrapper';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {

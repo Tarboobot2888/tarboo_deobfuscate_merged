@@ -2,7 +2,7 @@
 
 Bundlers and obfuscators commonly minify code (remove new lines and whitespace, replace variable names with shorter ones, use a shorter syntax).
 
-Most unminify sites just format the code, but webcrack also converts the syntax back to make it more readable and similar to the original code:
+Most unminify sites just format the code, but TARBOO DEOBFUSCATE JS also converts the syntax back to make it more readable and similar to the original code:
 
 ## block-statement
 
