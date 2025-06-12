@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+ 5aijwv-codex/update-project-name-and-restructure-site
 import { runDeobfuscateLocal } from '../../lib/tarboo-wrapper';
+
+import { deobfuscateLocal } from '../../lib/tarboo-wrapper';
+ main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
