@@ -11,7 +11,7 @@ export default function Layout({ children }: Props) {
     <div className="flex min-h-screen flex-col bg-background">
       <header className="backdrop-blur bg-background/60 sticky top-0 z-10 shadow">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <Link href="/" className="font-heading text-2xl text-primary">TARBOO</Link>
+          <Link href="/" className="font-heading text-2xl text-primary">TARBOO DEOBFUSCATE JS</Link>
           <nav className="flex gap-6 items-center text-text-main">
             <Link href="/" className="hover:text-primary">الرئيسية</Link>
             <Link href="/editor" className="hover:text-primary">المحرر</Link>
@@ -31,7 +31,7 @@ export default function Layout({ children }: Props) {
           <a href="https://github.com" aria-label="GitHub" className="hover:text-primary"><Github size={20} /></a>
           <a href="https://twitter.com" aria-label="Twitter" className="hover:text-primary"><Twitter size={20} /></a>
         </div>
-        <p>© {new Date().getFullYear()} TARBOO</p>
+        <p>© {new Date().getFullYear()} TARBOO DEOBFUSCATE JS</p>
       </footer>
     </div>
   )
