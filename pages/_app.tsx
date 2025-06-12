@@ -1,10 +1,15 @@
-import React from 'react';
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import '../styles/globals.css'
 
-export default function Page() {
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold mb-4">مرحبًا بك في TARBOO Deobfuscate JS</h1>
-      <p className="text-lg text-gray-700">تم دمج خوارزميات فك التشفير من packages.</p>
-    </div>
-  );
+    <>
+      <Head>
+        <title>TARBOO DEOBFUSCATE JS</title>
+        <meta name="description" content="TARBOO DEOBFUSCATE JS" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }

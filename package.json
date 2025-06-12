@@ -1,11 +1,12 @@
 {
-  "name": "tarboo-deobfuscate",
+  "name": "tarboo-deobfuscate-js",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest run"
   },
   "dependencies": {
     "@babel/generator": "^7.24.5",
